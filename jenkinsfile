@@ -2,10 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
-            docker{
-                image 'node:18-aplphine'
-                reusedNode true
+        stage('build') {
+            agent {
+                docker{
+                    image 'node:18-aplphine'
+                    reusedNode true
+                }
             }
             steps {
                 sh '''
