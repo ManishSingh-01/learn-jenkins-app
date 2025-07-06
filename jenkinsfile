@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh '''
                     ls -la
+		    echo "printing node and npm version"
                     node --version
                     npm --version
                     npm ci
